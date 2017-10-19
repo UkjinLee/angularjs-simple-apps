@@ -8,34 +8,35 @@
         crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
     <script src="app.js"></script>
+    <script src="contactData.service.js"></script>
+    <script src="contact.controller.js"></script>
 </head>
 
 <body>
-    <h1>My Contact App</h1>
-    <div class="container" ng-controller="ContactCtrl">
-        <div>
+    <div class="container" ng-controller="ContactCtrl as ctrl">
+        <div class="row">
             <ul class="list-group">
-                <li class="list-group-item" ng-repeat="contact in contacts" ng-click="selectContact($index)">
+                <li class="list-group-item" ng-repeat="contact in ctrl.contacts" ng-click="ctrl.selectContact($index)">
                     {{ contact.name.first + " " + contact.name.last }}
                 </li>
             </ul>
         </div>
-        <div>
+        <div class="row">
             <div class="media">
                 <div class="media-left">
                     <a href="#">
-                        <img ng-src="{{ selectedContact.picture.medium }}">
+                        <img ng-src="{{ ctrl.selectedContact.picture.medium }}">
                     </a>
                 </div>
                 <div class="media-body">
-                    <h4 class="media-heading">{{ selectedContact.name.first + " " + selectedContact.name.last }}</h4>
+                    <h4 class="media-heading">{{ ctrl.selectedContact.name.first + " " + ctrl.selectedContact.name.last }}</h4>
                     <div>
                         <p>
                             <h6>Location</h6>
                         </p>
                         <p>
-                            {{ selectedContact.location.street + " " + selectedContact.location.city + " " + selectedContact.location.state + " " + selectedContact.location.postcode
-                            }}
+                            {{ ctrl.selectedContact.location.street + " " + ctrl.selectedContact.location.city + " " + ctrl.selectedContact.location.state
+                            + " " + ctrl.selectedContact.location.postcode }}
                         </p>
                     </div>
                     <div>
@@ -43,7 +44,7 @@
                             <h6>Phone</h6>
                         </p>
                         <p>
-                            {{ selectedContact.phone }}
+                            {{ ctrl.selectedContact.phone }}
                         </p>
                     </div>
                 </div>
