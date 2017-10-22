@@ -17,4 +17,11 @@ angular.module("contactApp")
                 // todo
             });
         };
+
+        this.createUser = function (userData) {
+            return $http.post('http://localhost:3000/contacts', userData)
+            .then(function (response) {
+                return response.data;
+            });
+        };
     });
