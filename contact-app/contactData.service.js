@@ -11,7 +11,10 @@ angular.module("contactApp")
                 });
         };
 
-        this.saveUser = function (data) {
-            $http.put('http://localhost:3000/contacts/' + data.id, data);
+        this.saveUser = function (userData) {
+            return $http.put('http://localhost:3000/contacts/' + userData.id, userData)
+            .then(function (response) {
+                // todo
+            });
         };
     });
