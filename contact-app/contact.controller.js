@@ -11,7 +11,8 @@ angular.module("contactApp")
         this.selectContact = function (index) {
             this.selectedContact = this.contacts[index];
             this.editMode = false;
-            this.successMessage = "";
+            this.successMessage = undefined;
+            this.failureMessage = undefined;
         };
 
         this.editMode = false;
@@ -24,7 +25,9 @@ angular.module("contactApp")
             this.toggleEditMode();
             ContactDataSvc.saveUser(this.selectedContact)
             .then(function() {
-                self.successMessage = "User data successfully updated";
+                self.successMessage = "User data successfully updated.";
+            }, function() {
+                self.failureMessage = "There was an error. Please try again.";
             });
         };
     });
