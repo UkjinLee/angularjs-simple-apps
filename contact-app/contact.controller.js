@@ -10,5 +10,17 @@ angular.module("contactApp")
 
         this.selectContact = function (index) {
             this.selectedContact = this.contacts[index];
+            this.editMode = false;
+        };
+
+        this.editMode = false;
+
+        this.toggleEditMode = function () {
+            this.editMode = !this.editMode;
+        };
+
+        this.saveUser = function() {
+            this.toggleEditMode();
+            ContactDataSvc.saveUser(this.selectedContact);
         };
     });

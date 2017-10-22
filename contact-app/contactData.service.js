@@ -10,4 +10,8 @@ angular.module("contactApp")
                     return response.data;
                 });
         };
+
+        this.saveUser = function (data) {
+            $http.put('http://localhost:3000/contacts/' + data.id, data);
+        };
     });
