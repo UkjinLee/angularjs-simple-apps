@@ -339,50 +339,6 @@
         "thumbnail": "https://randomuser.me/api/portraits/thumb/women/92.jpg"
       },
       "nat": "DE"
-    },
-    {
-      "id": "13:43:25 GMT-0400 (EDT)",
-      "name": {
-        "first": "ukjin",
-        "last": "lee"
-      }
-    },
-    {
-      "id": "13:48:31 GMT-0400 (EDT)",
-      "name": {
-        "first": "solyi"
-      }
-    },
-    {
-      "id": "13:48:49 GMT-0400 (EDT)",
-      "name": {
-        "first": "danbi",
-        "last": "lee"
-      }
-    },
-    {
-      "id": "13:51:10 GMT-0400 (EDT)",
-      "name": {
-        "first": "seulbi"
-      }
-    },
-    {
-      "id": "13:51:37 GMT-0400 (EDT)",
-      "name": {
-        "first": "Youp"
-      }
-    },
-    {
-      "id": "13:53:36 GMT-0400 (EDT)",
-      "name": {
-        "first": "Nexus"
-      }
-    },
-    {
-      "id": "14:03:16 GMT-0400 (EDT)",
-      "name": {
-        "first": "Mooc"
-      }
     }
   ]
 }
